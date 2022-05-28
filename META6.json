@@ -8,7 +8,7 @@
     "authors" : [ "Peter du Marchie van Voorthuysen" ],
     "license" : "Artistic-2.0",
     "provides" : {
-        "BinaryHeap" : "lib/Parameterizable.rakumod"
+        "Parameterizable" : "lib/Parameterizable.rakumod"
     },
     "depends" : [ ],
     "build-depends" : [ ],
