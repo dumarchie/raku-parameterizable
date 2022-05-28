@@ -1,0 +1,32 @@
+use v6.c;
+use Test;
+plan 7;
+
+use lib 'lib';
+use Parameterizable;
+
+# Define some roles
+role Answer[Any:D $result] {}
+role Solution[Str $question, Any:D $result] {}
+
+# Define a parameterizable class
+class Ultimate is Parameterizable {
+    multi method MIXIN($a) { Answer[$a]    }
+    multi method MIXIN(|c) { Solution[|c] }
+}
+
+my \answer = Ultimate[42];
+isa-ok answer, Ultimate, 'my \answer = Ultimate[42]';
+does-ok answer, Answer[42], 'The appropriate role was mixed in';
+is answer.^name, 'Ultimate[Int]', 'answer.^name';
+
+my \solution = Ultimate["Question", 42];
+isa-ok solution, Ultimate, 'my \solution = Ultimate["Question", 42]';
+does-ok solution, Solution["Question", 42], 'The appropriate role was mixed in';
+is solution.^name, 'Ultimate[Str,Int]', 'solution.^name';
+
+throws-like {
+    my @param = "Question", Int;
+    Ultimate.^parameterize(|@param);
+}, X::AdHoc, message => 'Can not parameterize Ultimate with "Question", Int',
+  ".^parameterize(|@param) throws if there's no .MIXIN(|@param) candidate";

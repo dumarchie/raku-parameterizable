@@ -1,0 +1,19 @@
+{
+    "perl" : "6.c",
+    "name" : "Parameterizable",
+    "api"  : "1",
+    "auth" : "zef:dumarchie",
+    "version" : "0.0.1",
+    "description" : "Make a class parameterizable",
+    "authors" : [ "Peter du Marchie van Voorthuysen" ],
+    "license" : "Artistic-2.0",
+    "provides" : {
+        "BinaryHeap" : "lib/Parameterizable.rakumod"
+    },
+    "depends" : [ ],
+    "build-depends" : [ ],
+    "test-depends" : [ ],
+    "resources" : [ ],
+    "tags": [ "heap" ],
+    "source-url" : "git://github.com/dumarchie/raku-parameterizable.git"
+}
