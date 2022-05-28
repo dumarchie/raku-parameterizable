@@ -1,4 +1,4 @@
-class Parameterizable is Mu {
+class Parameterizable {
     method ^parameterize(Mu:U \obj, **@pos is raw) {
         my \ROLE = try obj.MIXIN(|@pos);
         if $! {
@@ -37,7 +37,7 @@ say $obj.of; # OUTPUT: «(Int)␤»
 
 =head1 DESCRIPTION
 
-    class Parameterizable is Mu {}
+    class Parameterizable {}
 
 Roles can be parameterized, and in almost all cases such a role can be used as
 if it were a class because Raku supports L<automatic role

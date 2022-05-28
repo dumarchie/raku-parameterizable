@@ -3,7 +3,7 @@
     "name" : "Parameterizable",
     "api"  : "1",
     "auth" : "zef:dumarchie",
-    "version" : "0.0.2",
+    "version" : "0.0.3",
     "description" : "Make a class parameterizable",
     "authors" : [ "Peter du Marchie van Voorthuysen" ],
     "license" : "Artistic-2.0",

@@ -24,7 +24,7 @@ say $obj.of; # OUTPUT: «(Int)␤»
 DESCRIPTION
 ===========
 
-    class Parameterizable is Mu {}
+    class Parameterizable {}
 
 Roles can be parameterized, and in almost all cases such a role can be used as if it were a class because Raku supports [automatic role punning](https://docs.raku.org/language/objects#Automatic_role_punning). One unsupported use case is a method that assigns to the invocant, for example to support autovivification. If a type wants to support that, it must be a class. But classes are not parameterizable... or are they?
 
