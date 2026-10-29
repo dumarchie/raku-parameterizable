@@ -6,6 +6,8 @@ Parameterizable - Make a class parameterizable
 SYNOPSIS
 ========
 
+This is a proof of concept demonstrating that Rakudo can support parameterizable classes using implementation-specific features. It isn't intended to be portable to other Raku implementations.
+
 ```raku
 use Parameterizable;
 
